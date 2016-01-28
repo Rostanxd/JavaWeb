@@ -8,10 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
+    <jsp:include page="encabezado.jsp"></jsp:include>
     <title>Aplicacion WEB</title>
   </head>
   <body>
-    <h1>Ingreso al Sistema</h1>
+    <h1>Ingreso al Sistema !!</h1>
     <form name="ValidarUsuario" id="ValidarUsuario" action="ValidarUsuario" method="post">
       <table border="0">
         <tbody>
