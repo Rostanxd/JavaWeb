@@ -10,12 +10,12 @@ public class Datos {
 
     public Datos(){
         try {
-            Class.forName("con.mysql.jdbo.Driver");
+            Class.forName("com.mysql.jdbo.Driver");
             String db = "jdbc:mysql://localhost/facturacion";
             con = DriverManager.getConnection(db,"root","");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        } catch (SQLException e) {
+        } catch (SQLException e) {;
             e.printStackTrace();
         }
     }
