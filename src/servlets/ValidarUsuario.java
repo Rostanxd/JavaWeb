@@ -24,7 +24,7 @@ public class ValidarUsuario extends javax.servlet.http.HttpServlet {
         String pass = "123";
 
         try {
-            // Creamso objeto de conexion a la BD
+            // Creamos objeto de conexion a la BD
             Datos misDatos = new Datos();
 
             // Tomar los valores del JSP
