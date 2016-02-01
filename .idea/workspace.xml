@@ -949,7 +949,7 @@
       <workItem from="1454013683383" duration="3800000" />
       <workItem from="1454075820228" duration="5138000" />
       <workItem from="1454084592442" duration="14609000" />
-      <workItem from="1454334001212" duration="23213000" />
+      <workItem from="1454334001212" duration="23220000" />
     </task>
     <task id="LOCAL-00001" summary="Avance del jquery en el formulario.">
       <created>1453962273848</created>
@@ -1011,11 +1011,17 @@
       <option name="project" value="LOCAL" />
       <updated>1454363504408</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Correcion del llamado a BD. Llamado a los formularios de Administrador y Usuario. Creacion del objeto Usuario y su form. Video #10.">
+      <created>1454363547672</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1454363547672</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63464000" />
+    <option name="totallyTimeSpent" value="63471000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
