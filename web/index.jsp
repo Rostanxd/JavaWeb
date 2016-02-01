@@ -10,10 +10,23 @@
   <head>
     <jsp:include page="encabezado.jsp"></jsp:include>
     <title>Aplicacion WEB</title>
+    <script>
+      $(document).ready(function() {
+        $("#ValidarUsuario").submit(function(){
+          $.post("ValidarUsuario",$("#ValidarUsuario").serialize(),function(data){
+            perfil = jQuery.trim(data);
+            if(perfil == 1) document.location.href = "MenuAdministrador.jsp";
+            else if(perfil == 2) document.location.href = "MenuEmpleado.jsp";
+            else $("#mensaje-ingreso").html("<h1>Usuario o Clave no validos.</h1>")
+          });
+          return false;
+        });
+      });
+    </script>
   </head>
   <body>
     <h1>Ingreso al Sistema !!</h1>
-    <form name="ValidarUsuario" id="ValidarUsuario" action="ValidarUsuario" method="post">
+    <form name="ValidarUsuario" id="ValidarUsuario" action="ValidarUsuario" method="POST">
       <table border="0">
         <tbody>
           <tr>
@@ -30,5 +43,6 @@
         </tbody>
       </table>
     </form>
+    <div id="mensaje-ingreso"></div>
   </body>
 </html>
