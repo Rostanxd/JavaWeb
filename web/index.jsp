@@ -25,7 +25,7 @@
             <td><input type="password" name="password" id="password" value="" size="10"/></td>
           </tr>
           <tr>
-            <td colspan="2"><input  type="submit" value="Ingresar" name="ingresar" id="ingresar"/></td>
+            <td colspan="2"><input  type="submit" value="Ingresar" name="Ingresar" id="Ingresar"/></td>
           </tr>
         </tbody>
       </table>
