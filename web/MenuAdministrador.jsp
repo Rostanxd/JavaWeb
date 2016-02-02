@@ -16,7 +16,7 @@
         <h1>Menu Principal</h1>
         <a href="MenuAdministrador.jsp">Clientes</a><br>
         <a href="MenuAdministrador.jsp">Productos</a><br>
-        <a href="MenuAdministrador.jsp">Usuarios</a><br>
+        <a href="Usuarios.jsp">Usuarios</a><br>
         <a href="MenuAdministrador.jsp">Nueva Factura</a><br>
         <a href="MenuAdministrador.jsp">Reporte Facturas</a><br>
         <a href="index.jsp">Salir</a>
