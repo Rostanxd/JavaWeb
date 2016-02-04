@@ -79,4 +79,62 @@ public class Datos {
             return null;
         }
     }
+
+    public void newUsuario(Usuario miUsuario){
+        try {
+            String sql = "INSERT INTO usuarios values(" +
+                    "'"+miUsuario.getIdUsuario()+"'," +
+                    "'"+miUsuario.getNombres()+"'," +
+                    "'"+miUsuario.getApellidos()+"'," +
+                    "'"+miUsuario.getClave()+"',"
+                    +miUsuario.getPerfil()+"," +
+                    "'"+miUsuario.getFoto()+"')";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException ex){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+    public void updateUsuario(Usuario miUsuario){
+        try {
+            String sql = "UPDATE usuarios SET "
+                    +"nombres = '"+miUsuario.getNombres()+"',"
+                    +"apellidos = '"+miUsuario.getApellidos()+"',"
+                    +"clave = '"+miUsuario.getClave()+"',"
+                    +"idPerfil = "+miUsuario.getPerfil()+","
+                    +"foto = '"+miUsuario.getFoto()+"',"
+                    +"where idUsuario = '"+miUsuario.getIdUsuario()+"'";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException ex){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+    public void deleteUsuario(String idUsuario){
+        try{
+            String sql = "DELETE FROM usuarios WHERE idUsuario = '"+idUsuario+"'";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+        }
+    }
+
+    public ResultSet getUsuarios(){
+        try{
+
+            Usuario miUsuario = null;
+
+            String sql = "select* from usuarios";
+            Statement st = con.createStatement();
+            return st.executeQuery(sql);
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+            return null;
+        }
+    }
+
+
 }

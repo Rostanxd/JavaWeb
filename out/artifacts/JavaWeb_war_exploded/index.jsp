@@ -25,6 +25,9 @@
     </script>
   </head>
   <body>
+    <%
+      session.invalidate();
+    %>
     <h1>Ingreso al Sistema !!</h1>
     <form name="ValidarUsuario" id="ValidarUsuario" action="ValidarUsuario" method="POST">
       <table border="0">

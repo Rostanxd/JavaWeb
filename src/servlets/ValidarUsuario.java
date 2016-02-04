@@ -3,6 +3,7 @@ package servlets;
 import clases.Datos;
 
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpSession;
 import javax.sound.midi.MidiSystem;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,6 +30,10 @@ public class ValidarUsuario extends javax.servlet.http.HttpServlet {
 
             // Validar usuario
             out.println(misDatos.validarUsr(usuario,password));
+
+            // Almacenar el usuario logueado en la sesion
+            HttpSession sesion = request.getSession(true);
+            sesion.setAttribute("usuario",misDatos.getUsuario(usuario));
 
             // Cerrar conexion con la BD
             misDatos.desconectar();
