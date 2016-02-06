@@ -60,6 +60,8 @@ public class Datos {
 
             Usuario miUsuario = null;
 
+            // Hola mundo !!!
+
             String sql = "select* from usuarios where idUsuario = '"+idUsuario+"'";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
