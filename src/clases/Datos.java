@@ -136,5 +136,95 @@ public class Datos {
         }
     }
 
+    public Cliente getCliente(String idCliente){
+        try{
+
+            Cliente miCliente = null;
+
+            String sql = "select* from clientes where idCliente = '"+idCliente+"'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()){
+                miCliente = new Cliente(
+                        rs.getString("idCliente"),
+                        rs.getInt("idTipo"),
+                        rs.getString("nombres"),
+                        rs.getString("apellidos"),
+                        rs.getString("direccion"),
+                        rs.getString("telefono"),
+                        rs.getInt("idCiudad"),
+                        rs.getDate("fechaNacimiento"),
+                        rs.getDate("fechaIngreso")
+                );
+            }
+            return miCliente;
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+            return null;
+        }
+    }
+
+    public ResultSet getClientes(){
+        try{
+
+            Usuario miCliente = null;
+
+            String sql = "select* from clientes";
+            Statement st = con.createStatement();
+            return st.executeQuery(sql);
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+            return null;
+        }
+    }
+
+
+    public void newCliente(Cliente miCliente){
+        try {
+            String sql = "INSERT INTO clientes values(" +
+                    "'"+miCliente.getIdClientes()+"'," +
+                    +miCliente.getIdTipo()+"," +
+                    "'"+miCliente.getNombres()+"'," +
+                    "'"+miCliente.getApellidos()+"',"+
+                    "'"+miCliente.getDireccion()+"'," +
+                    "'"+miCliente.getTelefono()+"',"+
+                    +miCliente.getIdCiudad()+","+
+                    "'"+Utilidades.formatDate(miCliente.getFechaNacimiento())+"',"+
+                    "'"+Utilidades.formatDate(miCliente.getFechaIngreso())+"')";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException ex){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+    public void updateCliente(Cliente miCliente){
+        try {
+            String sql = "UPDATE clientes SET "
+                    +"idTipo = "+miCliente.getIdTipo()+","
+                    +"nombres = '"+miCliente.getNombres()+"',"
+                    +"apellidos = '"+miCliente.getApellidos()+"',"
+                    +"direccion = '"+miCliente.getDireccion()+"',"
+                    +"telefono = '"+miCliente.getTelefono()+"',"
+                    +"idCiudad = "+miCliente.getIdCiudad()+","
+                    +"fechaNacimiento = '"+Utilidades.formatDate(miCliente.getFechaNacimiento())+"',"
+                    +"fechaIngreso = '"+Utilidades.formatDate(miCliente.getFechaIngreso())+"'"
+                    +"where idCliente = '"+miCliente.getIdClientes()+"'";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException ex){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+    public void deleteCliente(String idCliente){
+        try{
+            String sql = "DELETE FROM clientes WHERE idCliente = '"+idCliente+"'";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+        }
+    }
 
 }

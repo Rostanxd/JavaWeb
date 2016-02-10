@@ -1,6 +1,6 @@
 <%@ page import="clases.Usuario" %><%--
   Created by IntelliJ IDEA.
-  User: HP
+  User: Rostan
   Date: 28/01/2016
   Time: 0:42
   To change this template use File | Settings | File Templates.
@@ -21,7 +21,7 @@
             <jsp:forward page="index.jsp"></jsp:forward>
         <% } %>
         <h1>Menu Principal</h1>
-        <h2>Bienvenido... <%=miUsuario.getNombres()+" "+miUsuario.getApellidos()%></h2>
+        <h2>Bienvenido(a) <%=miUsuario.getNombres()+" "+miUsuario.getApellidos()%></h2>
         <br>
         <% String foto = miUsuario.getFoto();
             if (foto.isEmpty()){
@@ -29,11 +29,12 @@
         }
             if (foto != ""){ %>
         <img style="height: 100px; width: 100px;" src=<%="images/"+foto%>>
+        <img style="height: 100px; width: 100px;" src=<%="images/"+foto%>>
         <% }else{ %>
         <img style="height: 100px; width: 100px;" src="images/noImagen.png">
         <% } %>
         <br><br><br><br>
-        <a href="MenuAdministrador.jsp">Clientes</a><br>
+        <a href="Clientes.jsp">Clientes</a><br>
         <a href="MenuAdministrador.jsp">Productos</a><br>
         <a href="Usuarios.jsp">Usuarios</a><br>
         <a href="MenuAdministrador.jsp">Nueva Factura</a><br>

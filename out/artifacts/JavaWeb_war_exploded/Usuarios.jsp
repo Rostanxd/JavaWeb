@@ -18,6 +18,49 @@
                 });
             });
 
+            $(document).ready(function(){
+                $("#nuevo").click(function(){
+                    return validarTodo();
+                });
+            });
+
+            $(document).ready(function(){
+                $("#modificar").click(function(){
+                    return validarTodo();
+                });
+            });
+
+            $(document).ready(function(){
+                $("#borrar").click(function(){
+                    if (validarUsuario()){
+                        $("<div></div>").html("Estas seguro de borrar el registro?").
+                        dialog({title:"Confirmacion",modal:true,buttons:[
+                            {
+                                text:"Si",
+                                click:function(){
+                                    $(this).dialog("close");
+                                    $.post("EliminarUsuario",{idUsuario:$("#idUsuario").val()},function(data){
+                                        $("#idUsuario").val("");
+                                        $("#nombres").val("");
+                                        $("#apellidos").val("");
+                                        $("#clave").val("");
+                                        $("#confirmacion").val("");
+                                        $("#perfil").val("0");
+                                    })
+                                }
+                            },
+                            {
+                                text:"No",
+                                click:function() {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        ]});
+                    }
+                    return false;
+                });
+            });
+
             function validarTodo(){
                 if(validarUsuario()){
                     if(validarNombres()){
@@ -39,7 +82,7 @@
 
             function validarUsuario(){
                 if($("#idUsuario").val() == ""){
-                    $("<div></div>").html("Debe ingesar un Id de Usuario").dialog({
+                    $("<div></div>").html("Debe ingesar un Id de Usuario.").dialog({
                         title:"Error de validacion",modal:true,
                         buttons:[{text:"Ok",click:function(){
                             $(this).dialog("close");
@@ -52,7 +95,7 @@
 
             function validarNombres(){
                 if($("#nombres").val() == ""){
-                    $("<div></div>").html("Debe ingesar un nombre(s) de Usuario").dialog({
+                    $("<div></div>").html("Debe ingesar un nombre(s) de Usuario.").dialog({
                         title:"Error de validacion",modal:true,
                         buttons:[{text:"Ok",click:function(){
                             $(this).dialog("close");
@@ -65,7 +108,7 @@
 
             function validarApellidos(){
                 if($("#apellidos").val() == ""){
-                    $("<div></div>").html("Debe ingesar el apellido(s) del Usuario").dialog({
+                    $("<div></div>").html("Debe ingesar el apellido(s) del Usuario.").dialog({
                         title:"Error de validacion",modal:true,
                         buttons:[{text:"Ok",click:function(){
                             $(this).dialog("close");
@@ -91,7 +134,7 @@
 
             function validarConfirmacion(){
                 if($("#confirmacion").val() == ""){
-                    $("<div></div>").html("Debe ingesar la confirmacion de la clave").dialog({
+                    $("<div></div>").html("Debe ingesar la confirmacion de clave.").dialog({
                         title:"Error de validacion",modal:true,
                         buttons:[{text:"Ok",click:function(){
                             $(this).dialog("close");
@@ -104,7 +147,7 @@
 
             function validarClaveYconfirmacion(){
                 if($("#clave").val() != $("#confirmacion").val()){
-                    $("<div></div>").html("Clave y confirmacion no son iguales.").dialog({
+                    $("<div></div>").html("Clave y confirmacion no coinciden.").dialog({
                         title:"Error de validacion",modal:true,
                         buttons:[{text:"Ok",click:function(){
                             $(this).dialog("close");
@@ -117,7 +160,7 @@
 
             function validarPerfil(){
                 if($("#perfil").val() == "0"){
-                    $("<div></div>").html("Debe asignar el Perfil del Usuario").dialog({
+                    $("<div></div>").html("Debe asignar el Perfil del Usuario.").dialog({
                         title:"Error de validacion",modal:true,
                         buttons:[{text:"Ok",click:function(){
                             $(this).dialog("close");
@@ -175,26 +218,30 @@
 
             // Si presiona el boton consultar
             if (consultar){
-                if (idUsuario.equals("")) {
-                    mensaje = "Debe ingresar el Id del Usuario";
+                Datos misDatos = new Datos();
+                misDatos.conectar();
+                Usuario miUsuario = misDatos.getUsuario(idUsuario);
+                if(miUsuario==null){
+                    mensaje = "Usuario no existe o error con la BD.";
+                    idUsuario = "";
+                    nombres = "";
+                    apellidos = "";
+                    clave = "";
+                    confirmacion = "";
+                    perfil = "";
+                    foto = "";
+                    mensaje = "Usuario consultado";
                 }else{
-                    Datos misDatos = new Datos();
-                    misDatos.conectar();
-                    Usuario miUsuario = misDatos.getUsuario(idUsuario);
-                    if(miUsuario==null){
-                        mensaje = "Usuario no existe o error con la BD.";
-                    }else{
-                        idUsuario = miUsuario.getIdUsuario();
-                        nombres = miUsuario.getNombres();
-                        apellidos = miUsuario.getApellidos();
-                        clave = miUsuario.getClave();
-                        confirmacion = miUsuario.getClave();
-                        perfil = "" + miUsuario.getPerfil();
-                        foto = miUsuario.getFoto();
-                        mensaje = "Usuario consultado";
-                    }
-                    misDatos.desconectar();
+                    idUsuario = miUsuario.getIdUsuario();
+                    nombres = miUsuario.getNombres();
+                    apellidos = miUsuario.getApellidos();
+                    clave = miUsuario.getClave();
+                    confirmacion = miUsuario.getClave();
+                    perfil = "" + miUsuario.getPerfil();
+                    foto = miUsuario.getFoto();
+                    mensaje = "Usuario consultado";
                 }
+                misDatos.desconectar();
             }
 
             // Para limpiar el formulario
@@ -211,101 +258,46 @@
 
             // Si presiona boton Nuevo
             if(nuevo){
-                if(idUsuario.equals("")){
-                    mensaje = "Debe ingresar un Id Usuario.";
-                }else if (nombres.equals("")){
-                    mensaje = "Debe ingresar un nombre(s) de usuario";
-                }else if (apellidos.equals("")){
-                    mensaje = "Debe ingresar un apellidos(s) de usuario";
-                }else if (clave.equals("")){
-                    mensaje = "Debe ingresar una clave de usuario";
-                }else if (confirmacion.equals("")){
-                    mensaje = "Debe ingresar una confirmacion de clave";
-                }else if (perfil.equals("")){
-                    mensaje = "Debe seleccionar un perfil de usuario";
-                }else if (!clave.equals(confirmacion)){
-                    mensaje = "La clave y la confirmacion deben ser iguales";
+                Datos misDatos = new Datos();
+                misDatos.conectar();
+                Usuario miUsuario = misDatos.getUsuario(idUsuario);
+                if(miUsuario != null){
+                    mensaje = "Usuario ya existe";
                 }else{
-                    Datos misDatos = new Datos();
-                    misDatos.conectar();
-                    Usuario miUsuario = misDatos.getUsuario(idUsuario);
-                    if(miUsuario != null){
-                        mensaje = "Usuario ya existe";
-                    }else{
-                        miUsuario = new Usuario(idUsuario,
-                                nombres,
-                                apellidos,
-                                clave,
-                                new Integer(perfil),
-                                foto);
-                        misDatos.newUsuario(miUsuario);
-                        mensaje = "Usuario ingresado.";
-                    }
-                    misDatos.desconectar();
+                    miUsuario = new Usuario(idUsuario,
+                            nombres,
+                            apellidos,
+                            clave,
+                            new Integer(perfil),
+                            foto);
+                    misDatos.newUsuario(miUsuario);
+                    mensaje = "Usuario ingresado.";
                 }
+                misDatos.desconectar();
             }
 
             // Si presiona boton Modificar
             if(modificar){
-                if(idUsuario.equals("")){
-                    mensaje = "Debe ingresar un Id Usuario.";
-                }else if (nombres.equals("")){
-                    mensaje = "Debe ingresar un nombre(s) de usuario";
-                }else if (apellidos.equals("")){
-                    mensaje = "Debe ingresar un apellidos(s) de usuario";
-                }else if (clave.equals("")){
-                    mensaje = "Debe ingresar una clave de usuario";
-                }else if (confirmacion.equals("")){
-                    mensaje = "Debe ingresar una confirmacion de clave";
-                }else if (perfil.equals("")){
-                    mensaje = "Debe seleccionar un perfil de usuario";
-                }else if (!clave.equals(confirmacion)){
-                    mensaje = "La clave y la confirmacion deben ser iguales";
+                Datos misDatos = new Datos();
+                misDatos.conectar();
+                Usuario miUsuario = misDatos.getUsuario(idUsuario);
+                if(miUsuario == null){
+                    mensaje = "Usuario no existe";
                 }else{
-                    Datos misDatos = new Datos();
-                    misDatos.conectar();
-                    Usuario miUsuario = misDatos.getUsuario(idUsuario);
-                    if(miUsuario == null){
-                        mensaje = "Usuario no existe";
-                    }else{
-                        miUsuario = new Usuario(idUsuario,
-                                nombres,
-                                apellidos,
-                                clave,
-                                new Integer(perfil),
-                                foto);
-                        misDatos.updateUsuario(miUsuario);
-                        mensaje = "Usuario modificado.";
-                    }
-                    misDatos.desconectar();
+                    miUsuario = new Usuario(idUsuario,
+                            nombres,
+                            apellidos,
+                            clave,
+                            new Integer(perfil),
+                            foto);
+                    misDatos.updateUsuario(miUsuario);
+                    mensaje = "Usuario modificado.";
                 }
+                misDatos.desconectar();
             }
 
             // Si presiona el boton borrar
-            if (borrar){
-                if (idUsuario.equals("")) {
-                    mensaje = "Debe ingresar el Id del Usuario";
-                }else{
-                    Datos misDatos = new Datos();
-                    misDatos.conectar();
-
-                    Usuario miUsuario = misDatos.getUsuario(idUsuario);
-                    if(miUsuario==null){
-                        mensaje = "Usuario no existe o error con la BD.";
-                    }else{
-                        misDatos.deleteUsuario(idUsuario);
-                        idUsuario = "";
-                        nombres = "";
-                        apellidos = "";
-                        clave = "";
-                        confirmacion = "";
-                        perfil = "";
-                        foto = "";
-                        mensaje = "Usuario borrado";
-                    }
-                    misDatos.desconectar();
-                }
-            }
+            // Esto esta considerado en el jQuery del comienzo.
 
             // Si presiona Listar
             if(listar){
