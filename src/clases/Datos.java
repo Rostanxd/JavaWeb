@@ -227,4 +227,82 @@ public class Datos {
         }
     }
 
+    public Producto getproducto(String idProducto){
+        try{
+
+            Producto miProducto = null;
+
+            String sql = "select* from productos where idProducto = '"+idProducto+"'";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()){
+                miProducto = new Producto(
+                        rs.getString("idProducto"),
+                        rs.getString("descripcion"),
+                        rs.getInt("precio"),
+                        rs.getInt("idIVA"),
+                        rs.getString("notas"),
+                        rs.getString("foto")
+                );
+            }
+            return miProducto;
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+            return null;
+        }
+    }
+
+    public ResultSet getProductos(){
+        try{
+            String sql = "select* from productos";
+            Statement st = con.createStatement();
+            return st.executeQuery(sql);
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+            return null;
+        }
+    }
+
+    public void newProducto(Producto miProducto){
+        try {
+            String sql = "INSERT INTO productos values(" +
+                    "'"+miProducto.getIdProducto()+"'," +
+                    "'"+miProducto.getDescripcion()+"'," +
+                    +miProducto.getPrecio()+"," +
+                    +miProducto.getIdIva()+","+
+                    "'"+miProducto.getNotas()+"'," +
+                    "'"+miProducto.getFoto()+"')";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException ex){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+    public void updateProducto(Producto miProducto){
+        try {
+            String sql = "UPDATE productos SET "
+                    +"descripcion = '"+miProducto.getDescripcion()+"',"
+                    +"precio = "+miProducto.getPrecio()+","
+                    +"idIVA = "+miProducto.getIdIva()+","
+                    +"notas = '"+miProducto.getNotas()+"',"
+                    +"foto = '"+miProducto.getFoto()+"' "
+                    +"WHERE idProducto = '"+miProducto.getIdProducto()+"'";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException ex){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
+    public void deleteProducto(String idProducto){
+        try{
+            String sql = "DELETE FROM productos WHERE idProducto = '"+idProducto+"'";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+        }
+    }
+
 }

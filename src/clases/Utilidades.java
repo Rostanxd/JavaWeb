@@ -48,4 +48,40 @@ public class Utilidades {
         }
     }
 
+    public static boolean isNumeric(String cadena){
+        if (cadena != "") {
+            try {
+                Integer.parseInt(cadena);
+                return true;
+            } catch (NumberFormatException nfe) {
+                return false;
+            }
+        }else{
+            return false;
+        }
+    }
+
+    public static int stringToInt(String cadena){
+        int aux = 0;
+        if (cadena != "") {
+            try {
+                aux = Integer.parseInt(cadena);
+                return aux;
+            } catch (NumberFormatException nfe) {
+                return aux;
+            }
+        }else{
+            return aux;
+        }
+    }
+
+    public static String IVA(int idIva){
+        switch (idIva){
+            case 1: return "0%";
+            case 2: return "10%";
+            case 3: return "12%";
+            default: return "Sin definir";
+        }
+    }
+
 }

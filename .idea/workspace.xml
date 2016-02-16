@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81a6fa60-2fc7-4825-acd4-9b758f366c66" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/clases/Cliente.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/clases/Utilidades.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/servlets/EliminarCliente.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/servlets/EliminarUsuario.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Clientes.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ListadoClientes.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWeb_war_exploded/WEB-INF/classes/clases/Datos.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWeb_war_exploded/WEB-INF/classes/clases/Datos.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/JavaWeb/clases/Datos.class" afterPath="$PROJECT_DIR$/out/production/JavaWeb/clases/Datos.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/clases/Producto.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/servlets/EliminarProducto.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/ListadoProductos.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/Productos.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWeb_war_exploded/MenuAdministrador.jsp" afterPath="$PROJECT_DIR$/out/artifacts/JavaWeb_war_exploded/MenuAdministrador.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWeb_war_exploded/Usuarios.jsp" afterPath="$PROJECT_DIR$/out/artifacts/JavaWeb_war_exploded/Usuarios.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/clases/Datos.java" afterPath="$PROJECT_DIR$/src/clases/Datos.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/clases/Utilidades.java" afterPath="$PROJECT_DIR$/src/clases/Utilidades.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/MenuAdministrador.jsp" afterPath="$PROJECT_DIR$/web/MenuAdministrador.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Usuarios.jsp" afterPath="$PROJECT_DIR$/web/Usuarios.jsp" />
     </list>
     <ignored path="JavaWeb.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,6 +52,20 @@
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
+        <option name="myItemId" value="productos" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="MySQL - facturacion@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
         <option name="myItemId" value="clientes" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
@@ -69,34 +77,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Usuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/clases/Usuario.java">
+      <file leaf-file-name="ListadoProductos.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/ListadoProductos.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-              <folding>
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#731#732#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MenuAdministrador.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/MenuAdministrador.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.7647057">
-              <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.32352942">
+              <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EliminarUsuario.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlets/EliminarUsuario.java">
+      <file leaf-file-name="Productos.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/Productos.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+            <state vertical-scroll-proportion="1.4586847">
+              <caret line="249" column="52" selection-start-line="249" selection-start-column="52" selection-end-line="249" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -106,75 +101,72 @@
         <entry file="file://$PROJECT_DIR$/src/clases/Datos.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="219" column="48" selection-start-line="219" selection-start-column="48" selection-end-line="219" selection-end-column="48" />
+              <caret line="263" column="5" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
               <folding>
-                <marker date="1455051624913" expanded="true" signature="1319:1391" placeholder="select* from... usuarios" />
-                <marker date="1455051624913" expanded="true" signature="1814:1869" placeholder="select* from... usuarios" />
-                <marker date="1455051624913" expanded="true" signature="2632:2976" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="3283:3682" placeholder="UPDATE usuar... " />
-                <marker date="1455051624913" expanded="true" signature="3987:4041" placeholder="DELETE FROM " />
-                <marker date="1455051624913" expanded="true" signature="4371:4392" placeholder="select* from... usuarios" />
-                <marker date="1455051624913" expanded="true" signature="4766:4821" placeholder="select* from... usuarios" />
-                <marker date="1455051624913" expanded="true" signature="5772:5785" placeholder="select* from... usuarios" />
-                <marker date="1455051624913" expanded="true" signature="5772:5793" placeholder="select* from... clientes" />
-                <marker date="1455051624913" expanded="true" signature="6127:6181" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="6127:6287" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="6127:6371" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="6127:6480" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="6127:6504" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="6127:6531" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="6127:6556" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="6127:6614" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="6127:6640" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="6127:6696" placeholder="INSERT INTO usuarios... " />
-                <marker date="1455051624913" expanded="true" signature="7003:7022" placeholder="UPDATE clien... " />
-                <marker date="1455051624913" expanded="true" signature="7003:7450" placeholder="UPDATE clien... " />
-                <marker date="1455051624913" expanded="true" signature="7003:7548" placeholder="UPDATE clien... " />
-                <marker date="1455051624913" expanded="true" signature="7003:7549" placeholder="UPDATE clien... " />
-                <marker date="1455051624913" expanded="true" signature="7003:7677" placeholder="UPDATE usuar... " />
-                <marker date="1455051624913" expanded="true" signature="7982:8021" placeholder="DELETE FROM " />
-                <marker date="1455051624913" expanded="true" signature="7982:8033" placeholder="DELETE FROM " />
-                <marker date="1455051624913" expanded="true" signature="7982:8036" placeholder="DELETE FROM " />
+                <marker date="1455639797304" expanded="true" signature="1319:1391" placeholder="select* from... usuarios" />
+                <marker date="1455639797304" expanded="true" signature="1814:1869" placeholder="select* from... usuarios" />
+                <marker date="1455639797304" expanded="true" signature="2632:2976" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="3283:3682" placeholder="UPDATE usuar... " />
+                <marker date="1455639797304" expanded="true" signature="3987:4041" placeholder="DELETE FROM " />
+                <marker date="1455639797304" expanded="true" signature="4371:4392" placeholder="select* from... usuarios" />
+                <marker date="1455639797304" expanded="true" signature="4766:4821" placeholder="select* from... usuarios" />
+                <marker date="1455639797304" expanded="true" signature="5772:5785" placeholder="select* from... usuarios" />
+                <marker date="1455639797304" expanded="true" signature="5772:5793" placeholder="select* from... clientes" />
+                <marker date="1455639797304" expanded="true" signature="6127:6181" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="6127:6287" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="6127:6371" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="6127:6480" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="6127:6504" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="6127:6531" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="6127:6556" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="6127:6614" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="6127:6640" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="6127:6696" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="7003:7022" placeholder="UPDATE clien... " />
+                <marker date="1455639797304" expanded="true" signature="7003:7450" placeholder="UPDATE clien... " />
+                <marker date="1455639797304" expanded="true" signature="7003:7548" placeholder="UPDATE clien... " />
+                <marker date="1455639797304" expanded="true" signature="7003:7549" placeholder="UPDATE clien... " />
+                <marker date="1455639797304" expanded="true" signature="7003:7677" placeholder="UPDATE usuar... " />
+                <marker date="1455639797304" expanded="true" signature="7982:8021" placeholder="DELETE FROM " />
+                <marker date="1455639797304" expanded="true" signature="7982:8033" placeholder="DELETE FROM " />
+                <marker date="1455639797304" expanded="true" signature="7982:8036" placeholder="DELETE FROM " />
+                <marker date="1455639797304" expanded="true" signature="8384:8442" placeholder="select* from... usuarios" />
+                <marker date="1455639797304" expanded="true" signature="9193:9206" placeholder="select* from... usuarios" />
+                <marker date="1455639797304" expanded="true" signature="9193:9215" placeholder="select* from... productos" />
+                <marker date="1455639797304" expanded="true" signature="9551:9697" placeholder="INSERT INTO productos... " />
+                <marker date="1455639797304" expanded="true" signature="9551:9794" placeholder="INSERT INTO productos... " />
+                <marker date="1455639797304" expanded="true" signature="9551:9796" placeholder="INSERT INTO productos... " />
+                <marker date="1455639797304" expanded="true" signature="9551:9900" placeholder="INSERT INTO usuarios... " />
+                <marker date="1455639797304" expanded="true" signature="10210:10231" placeholder="UPDATE produ... " />
+                <marker date="1455639797304" expanded="true" signature="10210:10232" placeholder="UPDATE produ... " />
+                <marker date="1455639797304" expanded="true" signature="10210:10303" placeholder="UPDATE produ... " />
+                <marker date="1455639797304" expanded="true" signature="10210:10361" placeholder="UPDATE produ... " />
+                <marker date="1455639797304" expanded="true" signature="10210:10421" placeholder="UPDATE produ... " />
+                <marker date="1455639797304" expanded="true" signature="10210:10454" placeholder="UPDATE produ... " />
+                <marker date="1455639797304" expanded="true" signature="10210:10481" placeholder="UPDATE produ... " />
+                <marker date="1455639797304" expanded="true" signature="10210:10538" placeholder="UPDATE produ... " />
+                <marker date="1455639797304" expanded="true" signature="10210:10614" placeholder="UPDATE usuar... " />
+                <marker date="1455639797304" expanded="true" signature="10921:10978" placeholder="DELETE FROM " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EliminarCliente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/servlets/EliminarCliente.java">
+      <file leaf-file-name="MenuAdministrador.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/MenuAdministrador.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+            <state vertical-scroll-proportion="-13.692307">
+              <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Clientes.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/Clientes.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.823529">
-              <caret line="57" column="64" selection-start-line="57" selection-start-column="64" selection-end-line="57" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ListadoClientes.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/ListadoClientes.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.264706">
-              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Usuarios.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Usuarios.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Usuarios.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25862068">
-              <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+            <state vertical-scroll-proportion="120.88461">
+              <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -184,10 +176,8 @@
         <entry file="file://$PROJECT_DIR$/src/clases/Utilidades.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -237,14 +227,18 @@
         <option value="$PROJECT_DIR$/web/ListadoUsuarios.jsp" />
         <option value="$PROJECT_DIR$/web/ReporteFacturas.jsp" />
         <option value="$PROJECT_DIR$/src/clases/Cliente.java" />
-        <option value="$PROJECT_DIR$/web/MenuAdministrador.jsp" />
-        <option value="$PROJECT_DIR$/src/clases/Utilidades.java" />
         <option value="$PROJECT_DIR$/web/ListadoClientes.jsp" />
-        <option value="$PROJECT_DIR$/src/clases/Datos.java" />
         <option value="$PROJECT_DIR$/src/servlets/EliminarUsuario.java" />
         <option value="$PROJECT_DIR$/src/servlets/EliminarClientes.java" />
-        <option value="$PROJECT_DIR$/web/Usuarios.jsp" />
         <option value="$PROJECT_DIR$/web/Clientes.jsp" />
+        <option value="$PROJECT_DIR$/web/Usuarios.jsp" />
+        <option value="$PROJECT_DIR$/src/clases/Producto.java" />
+        <option value="$PROJECT_DIR$/src/servlets/EliminarProducto.java" />
+        <option value="$PROJECT_DIR$/web/ListadoProductos.jsp" />
+        <option value="$PROJECT_DIR$/web/MenuAdministrador.jsp" />
+        <option value="$PROJECT_DIR$/src/clases/Datos.java" />
+        <option value="$PROJECT_DIR$/src/clases/Utilidades.java" />
+        <option value="$PROJECT_DIR$/web/Productos.jsp" />
       </list>
     </option>
   </component>
@@ -271,7 +265,7 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -301,48 +295,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JavaWebGitHub">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JavaWebGitHub">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="web">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="JavaWebGitHub">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT=".idea">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -406,17 +359,62 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="clases" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane />
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="JavaWebGitHub">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="JavaWebGitHub">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="web">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="JavaWebGitHub">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT=".idea">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -443,6 +441,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="servlets" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\Documents\GrupoSinNombre\KB\JavaWeb\web" />
       <recent name="C:\Users\Bairon\Desktop\Rostan\JavaWebGitHub\web" />
@@ -1022,7 +1023,11 @@
       <workItem from="1454640515603" duration="1840000" />
       <workItem from="1454731604337" duration="937000" />
       <workItem from="1454967813371" duration="10925000" />
-      <workItem from="1455034870983" duration="10980000" />
+      <workItem from="1455034870983" duration="16883000" />
+      <workItem from="1455403159862" duration="1474000" />
+      <workItem from="1455569337861" duration="3139000" />
+      <workItem from="1455587201909" duration="5306000" />
+      <workItem from="1455628660720" duration="12770000" />
     </task>
     <task id="LOCAL-00001" summary="Avance del jquery en el formulario.">
       <created>1453962273848</created>
@@ -1100,7 +1105,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120509000" />
+    <option name="totallyTimeSpent" value="149101000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1112,8 +1117,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
@@ -1124,13 +1129,12 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29787233" sideWeight="0.48638427" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30444205" sideWeight="0.48940998" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2990249" sideWeight="0.48940998" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12153518" sideWeight="0.72402596" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4077778" sideWeight="0.72402596" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12153518" sideWeight="0.27597404" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11940298" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3077778" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1141,6 +1145,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3888889" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1201,67 +1206,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/MenuAdministrador.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/encabezado.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlets/ValidarUsuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/clases/Datos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="77" selection-start-line="77" selection-start-column="77" selection-end-line="77" selection-end-column="77" />
-          <folding>
-            <marker date="1455051624913" expanded="true" signature="1319:1391" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="1814:1869" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="2632:2976" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="3283:3682" placeholder="UPDATE usuar... " />
-            <marker date="1455051624913" expanded="true" signature="3987:4041" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="4371:4392" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="4766:4821" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="5772:5785" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="5772:5793" placeholder="select* from... clientes" />
-            <marker date="1455051624913" expanded="true" signature="6127:6181" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6287" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6371" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6480" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6504" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6531" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6556" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6614" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6640" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6696" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7022" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7450" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7548" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7549" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7677" placeholder="UPDATE usuar... " />
-            <marker date="1455051624913" expanded="true" signature="7982:8021" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="7982:8033" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="7982:8036" placeholder="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/botones.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1292,33 +1236,50 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
           <folding>
-            <marker date="1455051624913" expanded="true" signature="1319:1391" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="1814:1869" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="2632:2976" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="3283:3682" placeholder="UPDATE usuar... " />
-            <marker date="1455051624913" expanded="true" signature="3987:4041" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="4371:4392" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="4766:4821" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="5772:5785" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="5772:5793" placeholder="select* from... clientes" />
-            <marker date="1455051624913" expanded="true" signature="6127:6181" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6287" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6371" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6480" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6504" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6531" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6556" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6614" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6640" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6696" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7022" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7450" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7548" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7549" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7677" placeholder="UPDATE usuar... " />
-            <marker date="1455051624913" expanded="true" signature="7982:8021" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="7982:8033" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="7982:8036" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="1319:1391" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="1814:1869" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="2632:2976" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="3283:3682" placeholder="UPDATE usuar... " />
+            <marker date="1455639797304" expanded="true" signature="3987:4041" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="4371:4392" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="4766:4821" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="5772:5785" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="5772:5793" placeholder="select* from... clientes" />
+            <marker date="1455639797304" expanded="true" signature="6127:6181" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6287" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6371" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6480" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6504" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6531" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6556" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6614" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6640" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6696" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7022" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7450" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7548" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7549" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7677" placeholder="UPDATE usuar... " />
+            <marker date="1455639797304" expanded="true" signature="7982:8021" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="7982:8033" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="7982:8036" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="8384:8442" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="9193:9206" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="9193:9215" placeholder="select* from... productos" />
+            <marker date="1455639797304" expanded="true" signature="9551:9697" placeholder="INSERT INTO productos... " />
+            <marker date="1455639797304" expanded="true" signature="9551:9794" placeholder="INSERT INTO productos... " />
+            <marker date="1455639797304" expanded="true" signature="9551:9796" placeholder="INSERT INTO productos... " />
+            <marker date="1455639797304" expanded="true" signature="9551:9900" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10231" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10232" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10303" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10361" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10421" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10454" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10481" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10538" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10614" placeholder="UPDATE usuar... " />
+            <marker date="1455639797304" expanded="true" signature="10921:10978" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1346,33 +1307,50 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
-            <marker date="1455051624913" expanded="true" signature="1319:1391" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="1814:1869" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="2632:2976" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="3283:3682" placeholder="UPDATE usuar... " />
-            <marker date="1455051624913" expanded="true" signature="3987:4041" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="4371:4392" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="4766:4821" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="5772:5785" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="5772:5793" placeholder="select* from... clientes" />
-            <marker date="1455051624913" expanded="true" signature="6127:6181" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6287" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6371" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6480" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6504" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6531" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6556" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6614" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6640" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6696" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7022" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7450" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7548" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7549" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7677" placeholder="UPDATE usuar... " />
-            <marker date="1455051624913" expanded="true" signature="7982:8021" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="7982:8033" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="7982:8036" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="1319:1391" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="1814:1869" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="2632:2976" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="3283:3682" placeholder="UPDATE usuar... " />
+            <marker date="1455639797304" expanded="true" signature="3987:4041" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="4371:4392" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="4766:4821" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="5772:5785" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="5772:5793" placeholder="select* from... clientes" />
+            <marker date="1455639797304" expanded="true" signature="6127:6181" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6287" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6371" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6480" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6504" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6531" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6556" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6614" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6640" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6696" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7022" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7450" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7548" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7549" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7677" placeholder="UPDATE usuar... " />
+            <marker date="1455639797304" expanded="true" signature="7982:8021" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="7982:8033" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="7982:8036" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="8384:8442" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="9193:9206" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="9193:9215" placeholder="select* from... productos" />
+            <marker date="1455639797304" expanded="true" signature="9551:9697" placeholder="INSERT INTO productos... " />
+            <marker date="1455639797304" expanded="true" signature="9551:9794" placeholder="INSERT INTO productos... " />
+            <marker date="1455639797304" expanded="true" signature="9551:9796" placeholder="INSERT INTO productos... " />
+            <marker date="1455639797304" expanded="true" signature="9551:9900" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10231" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10232" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10303" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10361" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10421" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10454" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10481" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10538" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10614" placeholder="UPDATE usuar... " />
+            <marker date="1455639797304" expanded="true" signature="10921:10978" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1543,14 +1521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/MenuEmpleado.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1601,55 +1571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
-          <folding>
-            <element signature="e#920#921#0" expanded="false" />
-            <element signature="e#953#954#0" expanded="false" />
-            <element signature="e#1005#1006#0" expanded="false" />
-            <element signature="e#1049#1050#0" expanded="false" />
-            <element signature="e#1079#1080#0" expanded="false" />
-            <element signature="e#1108#1109#0" expanded="false" />
-            <element signature="e#1149#1150#0" expanded="false" />
-            <element signature="e#1185#1186#0" expanded="false" />
-            <element signature="e#1219#1220#0" expanded="false" />
-            <element signature="e#1249#1250#0" expanded="false" />
-            <element signature="e#1295#1296#0" expanded="false" />
-            <element signature="e#1333#1334#0" expanded="false" />
-            <element signature="e#1369#1370#0" expanded="false" />
-            <element signature="e#1401#1402#0" expanded="false" />
-            <element signature="e#1451#1452#0" expanded="false" />
-            <element signature="e#1493#1494#0" expanded="false" />
-            <element signature="e#1529#1530#0" expanded="false" />
-            <element signature="e#1561#1562#0" expanded="false" />
-            <element signature="e#1611#1612#0" expanded="false" />
-            <element signature="e#1653#1654#0" expanded="false" />
-            <element signature="e#1688#1689#0" expanded="false" />
-            <element signature="e#1719#1720#0" expanded="false" />
-            <element signature="e#1767#1768#0" expanded="false" />
-            <element signature="e#1807#1808#0" expanded="false" />
-            <element signature="e#1839#1840#0" expanded="false" />
-            <element signature="e#1870#1871#0" expanded="false" />
-            <element signature="e#1915#1916#0" expanded="false" />
-            <element signature="e#1955#1956#0" expanded="false" />
-            <element signature="e#1995#1996#0" expanded="false" />
-            <element signature="e#2033#2034#0" expanded="false" />
-            <element signature="e#2093#2094#0" expanded="false" />
-            <element signature="e#2147#2148#0" expanded="false" />
-            <element signature="e#2184#2185#0" expanded="false" />
-            <element signature="e#2219#2220#0" expanded="false" />
-            <element signature="e#2273#2274#0" expanded="false" />
-            <element signature="e#2321#2322#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/clases/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-          <folding>
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#731#732#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1657,17 +1578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3475298">
           <caret line="1239" column="0" selection-start-line="1239" selection-start-column="0" selection-end-line="1239" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/clases/Utilidades.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1680,67 +1590,14 @@
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/MenuAdministrador.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.7647057">
-          <caret line="36" column="29" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/ListadoClientes.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.264706">
-          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlets/EliminarUsuario.java">
+    <entry file="file://$PROJECT_DIR$/src/clases/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/clases/Datos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="219" column="48" selection-start-line="219" selection-start-column="48" selection-end-line="219" selection-end-column="48" />
-          <folding>
-            <marker date="1455051624913" expanded="true" signature="1319:1391" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="1814:1869" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="2632:2976" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="3283:3682" placeholder="UPDATE usuar... " />
-            <marker date="1455051624913" expanded="true" signature="3987:4041" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="4371:4392" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="4766:4821" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="5772:5785" placeholder="select* from... usuarios" />
-            <marker date="1455051624913" expanded="true" signature="5772:5793" placeholder="select* from... clientes" />
-            <marker date="1455051624913" expanded="true" signature="6127:6181" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6287" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6371" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6480" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6504" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6531" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6556" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6614" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6640" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="6127:6696" placeholder="INSERT INTO usuarios... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7022" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7450" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7548" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7549" placeholder="UPDATE clien... " />
-            <marker date="1455051624913" expanded="true" signature="7003:7677" placeholder="UPDATE usuar... " />
-            <marker date="1455051624913" expanded="true" signature="7982:8021" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="7982:8033" placeholder="DELETE FROM " />
-            <marker date="1455051624913" expanded="true" signature="7982:8036" placeholder="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1752,18 +1609,168 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/EliminarUsuario.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/Clientes.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.823529">
-          <caret line="57" column="64" selection-start-line="57" selection-start-column="64" selection-end-line="57" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="329" column="20" selection-start-line="329" selection-start-column="20" selection-end-line="329" selection-end-column="111" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ListadoClientes.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30769232">
+          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clases/Producto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+          <folding>
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#623#624#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1157#1158#0" expanded="true" />
+            <element signature="e#1189#1190#0" expanded="true" />
+            <element signature="e#1217#1218#0" expanded="true" />
+            <element signature="e#1259#1260#0" expanded="true" />
+            <element signature="e#1293#1294#0" expanded="true" />
+            <element signature="e#1324#1325#0" expanded="true" />
+            <element signature="e#1351#1352#0" expanded="true" />
+            <element signature="e#1391#1392#0" expanded="true" />
+            <element signature="e#1423#1424#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/EliminarProducto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="24" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/ListadoProductos.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32352942">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/MenuAdministrador.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.692307">
+          <caret line="37" column="30" selection-start-line="37" selection-start-column="30" selection-end-line="37" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/Usuarios.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25862068">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        <state vertical-scroll-proportion="120.88461">
+          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clases/Utilidades.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="20" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/clases/Datos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="263" column="5" selection-start-line="263" selection-start-column="5" selection-end-line="263" selection-end-column="5" />
+          <folding>
+            <marker date="1455639797304" expanded="true" signature="1319:1391" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="1814:1869" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="2632:2976" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="3283:3682" placeholder="UPDATE usuar... " />
+            <marker date="1455639797304" expanded="true" signature="3987:4041" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="4371:4392" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="4766:4821" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="5772:5785" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="5772:5793" placeholder="select* from... clientes" />
+            <marker date="1455639797304" expanded="true" signature="6127:6181" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6287" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6371" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6480" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6504" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6531" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6556" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6614" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6640" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="6127:6696" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7022" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7450" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7548" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7549" placeholder="UPDATE clien... " />
+            <marker date="1455639797304" expanded="true" signature="7003:7677" placeholder="UPDATE usuar... " />
+            <marker date="1455639797304" expanded="true" signature="7982:8021" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="7982:8033" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="7982:8036" placeholder="DELETE FROM " />
+            <marker date="1455639797304" expanded="true" signature="8384:8442" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="9193:9206" placeholder="select* from... usuarios" />
+            <marker date="1455639797304" expanded="true" signature="9193:9215" placeholder="select* from... productos" />
+            <marker date="1455639797304" expanded="true" signature="9551:9697" placeholder="INSERT INTO productos... " />
+            <marker date="1455639797304" expanded="true" signature="9551:9794" placeholder="INSERT INTO productos... " />
+            <marker date="1455639797304" expanded="true" signature="9551:9796" placeholder="INSERT INTO productos... " />
+            <marker date="1455639797304" expanded="true" signature="9551:9900" placeholder="INSERT INTO usuarios... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10231" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10232" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10303" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10361" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10421" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10454" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10481" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10538" placeholder="UPDATE produ... " />
+            <marker date="1455639797304" expanded="true" signature="10210:10614" placeholder="UPDATE usuar... " />
+            <marker date="1455639797304" expanded="true" signature="10921:10978" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/Productos.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4586847">
+          <caret line="249" column="52" selection-start-line="249" selection-start-column="52" selection-end-line="249" selection-end-column="52" />
           <folding />
         </state>
       </provider>

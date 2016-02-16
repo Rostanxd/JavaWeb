@@ -35,7 +35,7 @@
         <% } %>
         <br><br><br><br>
         <a href="Clientes.jsp">Clientes</a><br>
-        <a href="MenuAdministrador.jsp">Productos</a><br>
+        <a href="Productos.jsp">Productos</a><br>
         <a href="Usuarios.jsp">Usuarios</a><br>
         <a href="MenuAdministrador.jsp">Nueva Factura</a><br>
         <a href="ReporteFacturas.jsp">Reporte Facturas</a><br>
