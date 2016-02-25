@@ -11,17 +11,26 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 /**
- * Created by Rostan on 03/02/2016.
+ * Created by HP on 23/02/2016.
  */
-@WebServlet(name = "EliminarUsuario", value="/EliminarUsuario")
-public class EliminarProducto extends HttpServlet {
+//@WebServlet(name = "EliminarDetalleFacturaTmp")
+@WebServlet(name = "EliminarDetalleFacturaTmp", value = "/EliminarDetalleFacturaTmp")
+
+public class EliminarDetalleFacturaTmp extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         response.setContentType("text/html;charset=UTF-8");
+        response.addHeader("Cache-Control", "no-store, no-cache, must-revalidate");
+        response.addHeader("pragma", "no-cache");
+        response.addDateHeader("Expires", -1);
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
         PrintWriter out = response.getWriter();
         try {
             Datos misDatos = new Datos();
             misDatos.conectar();
-            misDatos.deleteProducto(request.getParameter("idProducto"));
+            misDatos.deleteDetalleFacturaTmp(request.getParameter("idProducto"));
             misDatos.desconectar();
         }catch(Exception e){
             System.out.println(e.toString());

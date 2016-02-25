@@ -168,7 +168,7 @@
             if(request.getParameter("precio") != null) precio = request.getParameter("precio");
             if(request.getParameter("idIva") != null) idIva = request.getParameter("idIva");
             if(request.getParameter("notas") != null) notas = request.getParameter("notas");
-            if(request.getParameter("fotos") != null) foto = request.getParameter("fotos");
+            if(request.getParameter("foto") != null) foto = request.getParameter("foto");
 
             // Si presiona el boton consultar
             if (consultar){
@@ -285,7 +285,7 @@
                 </tr>
                 <tr>
                     <td>IVA*:</td>
-                    <td><select name="idiva" id="idIva">
+                    <td><select name="idIva" id="idIva">
                         <option value="0" <%=(idIva.equals("") ? "selected" : "")%>>Seleccione una tarifa...</option>
                         <option value="1" <%=(idIva.equals("1") ? "selected" : "")%>>0%</option>
                         <option value="2" <%=(idIva.equals("2") ? "selected" : "")%>>10%</option>

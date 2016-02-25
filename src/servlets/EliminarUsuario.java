@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 /**
  * Created by Rostan on 03/02/2016.
  */
-@WebServlet(name = "EliminarUsuario")
+@WebServlet(name = "EliminarUsuario", value = "/EliminarUsuario")
 public class EliminarUsuario extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");

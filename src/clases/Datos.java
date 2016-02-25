@@ -41,7 +41,7 @@ public class Datos {
     public Integer validarUsr(String usu,String pass){
         Integer perfil = 0;
         try {
-            String sql = "select* from usuarios where idUsuario = '"+usu+"' and clave = '"+pass+"'";
+            String sql = "SELECT * from usuarios where idUsuario = '"+usu+"' and clave = '"+pass+"'";
 
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
@@ -60,7 +60,7 @@ public class Datos {
 
             Usuario miUsuario = null;
 
-            String sql = "select* from usuarios where idUsuario = '"+idUsuario+"'";
+            String sql = "SELECT * from usuarios where idUsuario = '"+idUsuario+"'";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             if (rs.next()){
@@ -127,7 +127,7 @@ public class Datos {
 
             Usuario miUsuario = null;
 
-            String sql = "select* from usuarios";
+            String sql = "SELECT * from usuarios";
             Statement st = con.createStatement();
             return st.executeQuery(sql);
         }catch(SQLException e){
@@ -232,7 +232,7 @@ public class Datos {
 
             Producto miProducto = null;
 
-            String sql = "select* from productos where idProducto = '"+idProducto+"'";
+            String sql = "SELECT * from productos where idProducto = '"+idProducto+"'";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(sql);
             if (rs.next()){
@@ -254,7 +254,7 @@ public class Datos {
 
     public ResultSet getProductos(){
         try{
-            String sql = "select* from productos";
+            String sql = "SELECT * from productos";
             Statement st = con.createStatement();
             return st.executeQuery(sql);
         }catch(SQLException e){
@@ -305,4 +305,84 @@ public class Datos {
         }
     }
 
+    public ResultSet getDetalleFacturaTmp(){
+        try{
+            String sql = "select* from detallefacturatmp";
+            Statement st = con.createStatement();
+            return st.executeQuery(sql);
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+            return null;
+        }
+    }
+
+    public int getTotalCantidad(){
+        try{
+            int total = 0;
+
+            String sql = "select sum(cantidad) as suma from detalleFacturaTmp";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()){
+                total = rs.getInt("suma");
+            }
+            return total;
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+            return 0;
+        }
+    }
+
+    public int getTotalValor(){
+        try{
+            int total = 0;
+
+            String sql = "select sum(cantidad * precio) as suma from detalleFacturaTmp";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()){
+                total = rs.getInt("suma");
+            }
+            return total;
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+            return 0;
+        }
+    }
+
+    public void newDetalleFacturaRmp(DetalleFacturaTmp miDetalle){
+        // Identificamos si el producto ya hace parte del detalle.
+        try {
+            String sql = "Select (1) from detallefacturatmp" +
+                    " where idProducto = " + miDetalle.getIdProducto();
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+
+            if(rs.next()){
+                // si existe, añadimos cantidad.
+                sql = "UPDATE detallefacturatmp " +
+                        "SET cantidad = cantidad +"+miDetalle.getCantidad()+" " +
+                        "WHERE idProducto = '"+miDetalle.getIdProducto()+"'";
+            }else{
+                sql = "INSERT INTO detallefacturatmp VALUES ('"+miDetalle.getIdProducto()+"',"+
+                        "'"+miDetalle.getDescripcion()+"',"+
+                        miDetalle.getPrecio()+","+
+                        miDetalle.getCantidad()+")";
+            }
+
+            st.executeUpdate(sql);
+        }catch(Exception e){
+
+        }
+    }
+
+    public void deleteDetalleFacturaTmp(String idProducto){
+        try{
+            String sql = "DELETE FROM detallefacturatmp WHERE idProducto = "+idProducto;
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+        }
+    }
 }

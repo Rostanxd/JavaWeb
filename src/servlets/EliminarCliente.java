@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 /**
  * Created by Rostan on 08/02/2016.
  */
-@WebServlet(name = "EliminarCliente")
+@WebServlet(name = "EliminarCliente", value="/EliminarCliente")
 public class EliminarCliente extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");

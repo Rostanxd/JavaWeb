@@ -46,6 +46,7 @@
                         <td><%=rs.getString("descripcion")%></td>
                         <td><%=rs.getInt("precio")%></td>
                         <td><%=Utilidades.IVA(rs.getInt("idIva"))%></td>
+                        <td><%=rs.getString("notas")%></td>
                         <td>
                             <% String foto = rs.getString("foto");
                                 if (foto.isEmpty()){
