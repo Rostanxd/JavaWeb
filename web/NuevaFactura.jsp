@@ -20,6 +20,12 @@
         });
 
         $(document).ready(function(){
+            $("#grabar").click(function(){
+                return validarCliente();
+            });
+        });
+
+        $(document).ready(function(){
             $(".eliminar").click(function(){
                 $("#borrado").val($(this).attr("href"));
                 $("<div></div>").html("Esta seguro de querer borrar el producto "
@@ -34,8 +40,6 @@
                                     {idProducto:$("#borrado").val()},
                                     function(data){
                                         location.reload();
-                                        $("#cantidad").val("123");
-                                        $("#producto").val("1");
                                     })
                         }
                     },
@@ -58,8 +62,21 @@
         }
 
         function validarProducto(){
-            if($("#producto").val() == 0){
+            if($("#producto").val() == "0"){
                 $("<div></div>").html("Debe seleccionar un producto.").dialog({
+                    title:"Error de validacion",modal:true,
+                    buttons:[{text:"Ok",click:function(){
+                        $(this).dialog("close");
+                    }}]
+                });
+                return false;
+            }
+            return true;
+        };
+
+        function validarCliente(){
+            if($("#cliente").val() == "0"){
+                $("<div></div>").html("Debe seleccionar un cliente.").dialog({
                     title:"Error de validacion",modal:true,
                     buttons:[{text:"Ok",click:function(){
                         $(this).dialog("close");
@@ -128,9 +145,7 @@
 
         // Si presionan el boton de agregar
         if(adicionar){
-            if(producto.equals(0)){
-                mensaje = "Debe seleccionar un producto.";
-            }else if(cantidad.isEmpty()){
+            if(cantidad.isEmpty()){
                 mensaje = "Debe ingresar una cantidad.";
             }else if(!Utilidades.isNumeric(cantidad)){
                 mensaje = "Debe ingresar un valor numerico";
@@ -156,6 +171,54 @@
                 mensaje = "Producto agregado.";
             }
 
+        }
+
+        if(grabar){
+            if(misDatos.getTotalCantidad() == 0){
+                mensaje = "Debe agregar detalle para poder grabar la factura.";
+            }else{
+                // Obtenemos un numero de factura (secuencia)
+                int numFac = misDatos.siguenteFactura();
+
+                // Grabamos los datos en tabla de facturas
+                misDatos.newFactura(numFac,cliente,new Date());
+
+                // Grabamos el detalle de la factura
+                ResultSet detalle = misDatos.getDetalleFacturaTmp();
+                int i = 1;
+                while(detalle.next()){
+                    misDatos.newDetalleFactura(numFac,
+                            i,
+                            detalle.getString("idProducto"),
+                            detalle.getString("descripcion"),
+                            detalle.getInt("precio"),
+                            detalle.getInt("cantidad")
+                    );
+                    i ++; // va grabando la linea.
+                }
+
+                // Borramos el detalle de factura temporal.
+                misDatos.deleteDetalleFacturaTmp();
+
+                // Inicializamos variables y mensaje.
+                cliente = "";
+                mensaje = "Factura # "+numFac+" creada con exito.";
+
+                // Mostramos Reporte de factura
+                ResultSet rs = null;
+
+                String sql = "SELECT factura.idFactura,factura.idCliente, CONCAT(nombres,' ',apellidos) AS nombreCompleto,fecha,idLinea,idProducto,descripcion,precio,cantidad,precio*detallefactura.cantidad AS valor " +
+                        "FROM factura INNER JOIN clientes ON  clientes.idCliente = factura.idCliente " +
+                        "INNER JOIN  detallefactura ON detallefactura.idFactura = factura.idFactura " +
+                        "WHERE factura.idFactura = "+numFac;
+
+                rs = misDatos.getResultSet(sql);
+                Reportes.reporteFacturas(rs,Utilidades.formatDate(new Date()),Utilidades.formatDate(new Date()));
+
+    %>
+        <jsp:forward page="images/Reporte.pdf"></jsp:forward>
+    <%
+            }
         }
 
 //        misDatos.desconectar(); // nunca cerrar la base de datos al comienzo, hacerlo al final.

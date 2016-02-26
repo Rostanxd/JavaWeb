@@ -1,7 +1,11 @@
 package clases;
 
+import com.sun.corba.se.spi.orbutil.fsm.Guard;
+
 import javax.xml.transform.Result;
 import java.sql.*;
+import java.util.*;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -384,5 +388,86 @@ public class Datos {
         }catch(SQLException e){
             Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
         }
+    }
+
+    public int siguenteFactura(){
+        int numFac = 1;
+        try {
+            String sql = "SELECT MAX(idFactura) as NUM from factura";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()){
+                numFac = rs.getInt("NUM") + 1;
+            }else{
+                return 1;
+            }
+            return numFac;
+        }catch(Exception e){
+            return 1;
+        }
+    }
+
+    public void newFactura(int idFactura, String idCliente, Date fecha){
+        try {
+            String sql = "INSERT INTO factura VALUES("+idFactura+"," +
+                    "'"+idCliente+"'," +
+                    "'"+Utilidades.formatDate(fecha)+"')";
+
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+
+        }catch (Exception e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+        }
+    }
+
+    public void newDetalleFactura(int idFactura, int idLinea, String idProducto, String descripcion, int precio, int cantidad){
+
+        PreparedStatement st = null;
+
+        try {
+
+            st = getCon().prepareStatement("INSERT INTO detallefactura VALUES(?,?,?,?,?,?)");
+            st.setInt(1,idFactura);
+            st.setInt(2,idLinea);
+            st.setString(3,idProducto);
+            st.setString(4,descripcion);
+            st.setInt(5,precio);
+            st.setInt(6,cantidad);
+
+            st.executeUpdate();
+
+        }catch (Exception e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+        }
+    }
+
+    public void deleteDetalleFacturaTmp(){
+        try{
+            String sql = "DELETE FROM detallefacturatmp";
+            Statement st = con.createStatement();
+            st.executeUpdate(sql);
+        }catch(SQLException e){
+            Logger.getLogger(Datos.class.getName()).log(Level.SEVERE,null,e);
+        }
+    }
+
+    public ResultSet getResultSet(String sql){
+        ResultSet rs = null;
+        try{
+            PreparedStatement st = getCon().prepareStatement(sql);
+            rs = st.executeQuery();
+        }catch(Exception e){
+
+        }
+        return rs;
+    }
+
+    public Connection getCon() {
+        return con;
+    }
+
+    public void setCon(Connection con) {
+        this.con = con;
     }
 }
